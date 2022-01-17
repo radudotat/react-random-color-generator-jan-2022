@@ -1,2 +1,5 @@
-# react-random-color-generator-jan-2022
+# React random color generator
+
+## Project Description
+
 Generate random colors using React
