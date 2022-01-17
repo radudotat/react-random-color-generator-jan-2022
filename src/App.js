@@ -6,6 +6,8 @@ import { randomHexColor } from './helpers';
 
 function App() {
   const [color, setColor] = useState('#ccc333');
+  const exactText = `Generated Color: ${color}`;
+
   const styles = css`
     color: black;
     border: solid 1px gray;
@@ -13,6 +15,7 @@ function App() {
     height: 2em;
     margin-top: 2em;
   `;
+
   const boxStyles = css`
     display: block;
     border: solid 1px gray;
@@ -25,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div css={boxStyles}>Generated Color: {color}</div>
+        <div css={boxStyles}>{exactText}</div>
         <button
           css={styles}
           onClick={(event) => {
