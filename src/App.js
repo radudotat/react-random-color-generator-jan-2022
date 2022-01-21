@@ -1,8 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import './App.css';
 import { css } from '@emotion/react';
+import randomColor from 'random-color';
 import { useState } from 'react';
-import { randomHexColor } from './helpers';
+
+// import { randomHexColor } from './helpers';
+
+function randomHexColor() {
+  return randomColor().hexString().toLowerCase();
+}
 
 function App() {
   const [color, setColor] = useState('#ccc333');
@@ -25,6 +31,7 @@ function App() {
     width: 50vw;
     height: 50vh;
   `;
+
   return (
     <div className="App">
       <header className="App-header">
